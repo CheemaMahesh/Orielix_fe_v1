@@ -200,7 +200,7 @@ export function WhatWeOffer() {
                                     <h3 className={`text-xl md:text-2xl font-bold mb-3 md:mb-4 transition-all duration-300 ${activeIndex === index ? card.iconColor : 'text-gray-800'}`}>
                                         {card.title}
                                     </h3>
-                                    <p className="text-base md:text-lg text-gray-700">{card.description}</p>
+                                    <p className="text-base md:text-lg text-gray-700 font-normal">{card.description}</p>
                                 </CardContent>
                             </Card>
                         </div>
@@ -290,7 +290,7 @@ export function WhatWeOffer() {
                                         </div>
                                         <h3 className="text-xl font-bold group-hover:text-yellow-600 transition-colors duration-300">Collaborative Community</h3>
                                     </div>
-                                    <p className="text-gray-600 relative z-10">Join and explore communities from 10+ different domains.</p>
+                                    <p className="text-gray-600 relative z-10 font-normal text-base">Join and explore communities from 10+ different domains.</p>
                                 </div>
                             </div>
 
@@ -304,7 +304,7 @@ export function WhatWeOffer() {
                                         </div>
                                         <h3 className="text-xl font-bold group-hover:text-green-600 transition-colors duration-300">Innovative Workshops</h3>
                                     </div>
-                                    <p className="text-gray-600 relative z-10">Real practical workshop from present industry curriculum.</p>
+                                    <p className="text-gray-600 relative z-10 font-normal text-base">Real practical workshop from present industry curriculum.</p>
                                 </div>
                             </div>
 
@@ -318,7 +318,7 @@ export function WhatWeOffer() {
                                         </div>
                                         <h3 className="text-xl font-bold group-hover:text-purple-600 transition-colors duration-300">Rewarding Events</h3>
                                     </div>
-                                    <p className="text-gray-600 relative z-10">Solve, build and win through top industry events.</p>
+                                    <p className="text-gray-600 relative z-10 font-normal text-base">Solve, build and win through top industry events.</p>
                                 </div>
                             </div>
 
@@ -332,7 +332,7 @@ export function WhatWeOffer() {
                                         </div>
                                         <h3 className="text-xl font-bold group-hover:text-blue-600 transition-colors duration-300">Real Networking</h3>
                                     </div>
-                                    <p className="text-gray-600 relative z-10">Collaborate with people on projects, discussions and workshops to expand network.</p>
+                                    <p className="text-gray-600 relative z-10 font-normal text-base">Collaborate with people on projects, discussions and workshops to expand network.</p>
                                 </div>
                             </div>
                         </div>
