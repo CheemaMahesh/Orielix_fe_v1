@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Button } from "../../components/global/components/ui/button";
+import { Button } from "../global/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import image from '../global/images/my-uploads/orielixlogo.png';
+import logo from '../global/images/my-uploads/orielixlogo.png'
 
 export function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,7 +54,7 @@ export function Nav() {
     return (
         <header className={`py-0 px-0 md:px-2 fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md h-16' : 'bg-white/80 backdrop-blur-sm shadow-sm h-20 md:h-24'}`}>
             <div className="max-w-7xl mx-auto w-full">
-                <div className="flex items-center justify-between h-full">
+                <div className="grid grid-cols-3 items-center h-full w-full">
                     <div className="flex-shrink-0 pl-2 flex items-center h-full overflow-visible">
                         <Link
                             to="/"
@@ -65,42 +65,41 @@ export function Nav() {
                             className="cursor-pointer transition-all duration-300 flex items-center justify-center overflow-visible"
                         >
                             <img
-                                src={image}
+                                src={logo}
                                 alt="Orielix Logo"
                                 className={`transition-all duration-300 transform hover:scale-110 ${isScrolled ? 'h-[60px] -mt-1' : 'h-[80px] md:h-[110px] -mt-1'}`}
                             />
                         </Link>
                     </div>
 
-                    <div className="hidden md:flex flex-1 justify-center pl-10 lg:pl-20">
-                        <nav className="flex items-center gap-4 lg:gap-10 px-4">
-                            <Link
-                                to="/"
-                                className={`text-base lg:text-xl font-medium transition-all duration-300 relative px-2 lg:px-3 py-2 rounded-lg group ${location.pathname === '/' ? 'text-purple-600' : 'text-gray-900 hover:text-purple-600'}`}
-                            >
-                                <span className="relative z-10">Home</span>
-                                <span className={`absolute inset-0 bg-purple-100 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center ${location.pathname === '/' ? 'scale-100 opacity-60' : 'opacity-0 group-hover:opacity-40'}`}></span>
-                            </Link>
-                            <Link
-                                to="/about"
-                                className={`text-base lg:text-xl font-medium transition-all duration-300 relative px-2 lg:px-3 py-2 rounded-lg group ${location.pathname === '/about' ? 'text-purple-600' : 'text-gray-900 hover:text-purple-600'}`}
-                            >
-                                <span className="relative z-10">Community</span>
-                                <span className={`absolute inset-0 bg-purple-100 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center ${location.pathname === '/about' ? 'scale-100 opacity-60' : 'opacity-0 group-hover:opacity-40'}`}></span>
-                            </Link>
-                            <Link
-                                to="/team"
-                                className={`text-base lg:text-xl font-medium transition-all duration-300 relative px-2 lg:px-3 py-2 rounded-lg group ${location.pathname === '/team' ? 'text-purple-600' : 'text-gray-900 hover:text-purple-600'}`}
-                            >
-                                <span className="relative z-10">Session</span>
-                                <span className={`absolute inset-0 bg-purple-100 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center ${location.pathname === '/team' ? 'scale-100 opacity-60' : 'opacity-0 group-hover:opacity-40'}`}></span>
-                            </Link>
-                        </nav>
+                    <div className="hidden md:flex justify-center items-center">
+                        <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-full p-1 shadow-sm border border-indigo-100">
+                            <div className="flex space-x-1">
+                                <Link
+                                    to="/"
+                                    className={`px-5 py-2 rounded-full ${location.pathname === '/' ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:from-indigo-600 hover:to-purple-600 transform hover:-translate-y-0.5' : 'text-indigo-700 font-medium text-sm transition-all duration-300 hover:bg-white/80 hover:shadow-sm transform hover:-translate-y-0.5'}`}
+                                >
+                                    Home
+                                </Link>
+                                <Link
+                                    to="/about"
+                                    className={`px-5 py-2 rounded-full ${location.pathname === '/about' ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:from-indigo-600 hover:to-purple-600 transform hover:-translate-y-0.5' : 'text-indigo-700 font-medium text-sm transition-all duration-300 hover:bg-white/80 hover:shadow-sm transform hover:-translate-y-0.5'}`}
+                                >
+                                    Community
+                                </Link>
+                                <Link
+                                    to="/team"
+                                    className={`px-5 py-2 rounded-full ${location.pathname === '/team' ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:from-indigo-600 hover:to-purple-600 transform hover:-translate-y-0.5' : 'text-indigo-700 font-medium text-sm transition-all duration-300 hover:bg-white/80 hover:shadow-sm transform hover:-translate-y-0.5'}`}
+                                >
+                                    Session
+                                </Link>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="hidden md:flex items-center flex-shrink-0 gap-2 lg:gap-4 mr-3 lg:mr-5">
+                    <div className="hidden md:flex items-center justify-end flex-shrink-0 gap-2 lg:gap-4 mr-3 lg:mr-5">
                         <Link to="/login">
-                            <Button variant="outline" className="border-2 rounded-full px-3 lg:px-5 py-1 lg:py-2 hover:bg-purple-50 hover:text-purple-600 hover:border-purple-300 transition-all text-sm lg:text-base font-medium">
+                            <Button variant="outline" className="rounded-full px-4 lg:px-6 py-1 lg:py-2 border-2 border-indigo-200 text-indigo-600 hover:bg-indigo-50 hover:text-indigo-700 hover:border-indigo-300 transition-all text-sm lg:text-base font-medium">
                                 Log in
                             </Button>
                         </Link>

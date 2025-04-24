@@ -53,7 +53,7 @@ export function HeroSection() {
                     {isMobile ? " in the way you love!" : <><br />in the way you love!</>}
                 </p>
 
-                <div className="flex justify-center">
+                <div className="flex justify-center text-white">
                     <Button className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 rounded-full px-6 md:px-8 py-5 md:py-6 text-base md:text-lg font-medium flex items-center gap-2 md:gap-3 shadow-lg hover:shadow-xl transition-all duration-300 group border-0 relative overflow-hidden">
                         <span className="relative z-10">Get Started</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-indigo-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
